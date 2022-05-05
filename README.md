@@ -1,0 +1,21 @@
+# Junior-Manual-QA-Homework-1
+Requirements analysis
+-Неправильное название текстового поля “Report Name”, должно быть “Report View Name”.
+-Неправильное название иконок вида отчета . Вместо “Firm Image” и “Client Image” , должно быть “Firm Report” и “Client Report”
+-Нету иконки для выбора формата “XLS”.
+-Validation: once user clicks outside of “Report View Name” textbox, validate displayname character count <= 256. Ограничение по символам должно быть <=255.
+-Button: “Create View”
+“Create View” is greyed out and not clickable unless:(Иконка “Create View” должна быть кликабельной при соблюдении условий ниже).
+displayname is not null 
+viewcontext is not null
+format is not null
+IF format = PDF, then orientation is null(Данное условие бессмысленное , т.к при выборе формата PDF, мы не сможем нажать на иконку “Create View”)
+-If Fails validation, then display red border around text box and display message:
+Upon successful save by clicking Save button, takes you to Report Builder Page.
+После неудачной проверки нужно запретить сохранение.
+-Вместо иконки “Next”, должна быть иконка “Create View”.
+-Ошибка в дизайне , иконки “Landscape Image” и “Portait Image” съехали в правую сторону.
+Задание №2
+-As a Client I want to open  “Create View” Page, select  “PDF” Radio Icon, so that I don't see Orientation Radio Icons.
+-As a FirmManager/Client I want to open the  “Create View” Page, Enter 256 сharacters in the “Report View Name” textbox  and click outside the textbox, so that the red border around the text box appears.
+-As FirmManager/ Client I want to open "Create View" page, enter <=255 character and click on "Create View" button without selecting Radio Icons, so that "Create View" button is greyed out and not clickabl
